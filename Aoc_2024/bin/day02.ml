@@ -1,0 +1,1 @@
+let string_to_int_arrays s = Aoc_2024.Utils.parse_line_int s

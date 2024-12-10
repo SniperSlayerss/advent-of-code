@@ -1,4 +1,4 @@
 (executables
  (public_names main day01)
  (names main day01 )
- (libraries Aoc_2024 str))
+ (libraries Aoc_2024))

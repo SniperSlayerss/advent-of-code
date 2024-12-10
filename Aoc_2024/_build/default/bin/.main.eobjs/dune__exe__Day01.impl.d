@@ -1,1 +1,1 @@
-bin/day01.ml: Aoc_2024 List Printf Str String
+bin/day01.ml: Aoc_2024 Int List Printf

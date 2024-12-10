@@ -1,3 +1,4 @@
 (library
  (name Aoc_2024)
+ (libraries str)
  (modules utils))
