@@ -1,13 +1,3 @@
-let read_file_as_string filename = 
-    let ic = open_in filename in 
-    try
-        let contents = really_input_string ic (in_channel_length ic) in
-        close_in ic;
-        contents
-    with e ->
-        close_in_noerr ic;
-        raise e
-
 let parse_line_int s =
     let re = Str.regexp "[0-9]+" in
     let rec collect_matches acc pos =
@@ -57,6 +47,6 @@ let find_similarity_from_string s =
 
 let () = 
     let filename = "data/day01.txt" in 
-    let contents = read_file_as_string filename in
+    let contents = Aoc_2024.Utils.read_file_as_string filename in
     let sum = find_similarity_from_string contents in
     Printf.printf "%d\n" sum
