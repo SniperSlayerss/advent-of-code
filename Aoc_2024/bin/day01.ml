@@ -1,5 +1,5 @@
 let find_sum_from_string s =
-    let (a,b) = Aoc_2024.Utils.lines_to_int_array s in
+    let (a,b) = Aoc_2024.Utils.lines_to_int_array_tuple s in
     let rec get_dists a b acc = 
         match a, b with
             | fa :: a, fb :: b -> get_dists a b (Int.abs (fa - fb) :: acc)
@@ -12,7 +12,7 @@ let occurences n l =
     List.length (List.filter (fun x -> x = n) l)
 
 let find_similarity_from_string s =
-    let (a,b) = Aoc_2024.Utils.lines_to_int_array s in
+    let (a,b) = Aoc_2024.Utils.lines_to_int_array_tuple s in
     let rec get_similarity a acc = 
         match a with
             | fa :: rest -> get_similarity rest ((occurences fa b) * fa :: acc)

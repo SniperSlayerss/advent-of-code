@@ -21,7 +21,7 @@ let line_to_int_array s =
         collect_matches [] 0
 
 
-let lines_to_int_array s =
+let lines_to_int_array_tuple s =
     let split_lines = String.split_on_char '\n' s in
     let split_ints = List.map line_to_int_array split_lines in
     let rec combine lines acca accb = 
@@ -29,4 +29,9 @@ let lines_to_int_array s =
             | [a ; b] :: rest -> combine rest (a :: acca) (b :: accb)
             | _ -> (List.sort compare acca, List.sort compare accb)
     in
-    combine split_ints [] []
+    combine split_ints [] [] 
+
+let lines_to_ints s =
+    let split_lines = String.split_on_char '\n' s in
+    List.map line_to_int_array split_lines
+        

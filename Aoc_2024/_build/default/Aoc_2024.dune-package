@@ -1,4 +1,4 @@
 (lang dune 3.17)
 (name Aoc_2024)
 (sections (lib .) (bin ../../bin))
-(files (lib (META dune-package opam)) (bin (day01 main)))
+(files (lib (META dune-package opam)) (bin (day01 day02 main)))

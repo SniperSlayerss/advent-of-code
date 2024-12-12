@@ -5,5 +5,6 @@ lib: [
 ]
 bin: [
   "_build/install/default/bin/day01"
+  "_build/install/default/bin/day02"
   "_build/install/default/bin/main"
 ]
